@@ -9,6 +9,9 @@ body{
     height: 100vh;
     display: flex;
 }
+input{
+    border: none;
+}
 figure{
     border-radius: 50px;
     width: 50px;
@@ -22,7 +25,7 @@ figure img{
     object-fit: cover;
 }
 /*ID*/
-#last-sign-in{
+#last-sign-in,.last-message{
     color: gray;
     font-size: 90%;
     margin-top: 4px;
@@ -38,8 +41,15 @@ figure img{
 .row{
     display: flex;
 }
-.col:first-child,.col:first-child .scroll div > div{
+.col:first-child,
+.col:first-child .scroll div > div,
+#search-chat,
+#notification,
+#icons-setting{
     display: none;
+}
+.col:first-child .scroll > div{
+    background-color: white;
 }
 .col:nth-child(2){
     width: 100%;
@@ -49,12 +59,16 @@ figure img{
 .flex{
     display: flex;
 }
+
 /*MARGIN*/
 .m-left-1{
     margin-left: 1rem;
 }
-.m-top{
+.m-top-0_5{
     margin-top: 0.5rem;
+}
+.mx-10{
+    margin: 10px;
 }
 
 
@@ -62,24 +76,47 @@ figure img{
 .p-photo{
     padding: 0.5rem 1rem;
 }
+.p-0_5{
+    padding: 0.5rem;
+}
+.p-1{
+    padding: 1rem;
+}
 
 /*BG COLOR GREY*/
 .bg-grey{
     background-color: #eaeaea;
 }
+.bg-light-grey{
+    background-color: #f9f9f9;
+}
+.bg-white{
+    background-color: white;
+}
+.bg-light-blue{
+    background-color: #8fdafc;
+}
 
 /*ALIGN*/
-
+.space{
+    justify-content: space-between
+}
 /*TEXT PROPERTY*/
 
     /*FONT SIZE*/
     .fs-90{
         font-size: 90%;
     }
+    .fs-1{
+        font-size:23px;
+    }
 
     /*COLOR*/
     .grey{
         color: grey;
+    }
+    .light-blue{
+        color: #8fdafc;
     }
 
 /***************************/
@@ -94,15 +131,24 @@ figure img{
     .container{
         max-width: 1400px;
         margin: auto;
-        height: 80%;
     }
     .col:first-child{
-        width: 30%;
+        width: 400px;
     }
     .col:nth-child(2){
-        width: 70%;
+        flex-grow: 1;
     }
-    .col:first-child .scroll div > div{
+    .col:first-child .scroll div > div,
+    #search-chat,  
+    #icons-setting{
         display: block;
+    }
+    #notification{
+        display: flex;
+    }
+    .col:first-child .scroll{
+        display: flex;
+        flex-direction: column;
+        gap:2px;
     }
 }
