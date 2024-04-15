@@ -33,11 +33,11 @@ figure img{
 }
 #message-text{
     background-image: url("../img/mine.jpg");
-    height: 100%;
+    flex-grow: 1;
     overflow: scroll;
     padding: 2rem;
-}
-#message-text div{
+    display: flex;
+    flex-direction: column;
 }
 #write i{
     display: none
@@ -59,7 +59,7 @@ figure img{
     display: none;
 }
 .col:nth-child(2) input{
-    width: 100%;
+    flex-grow: 1;
     border-radius: 10px;
 }
 .col:first-child .scroll > div{
@@ -71,6 +71,29 @@ figure img{
     display: flex;
     flex-direction: column;
 }
+.message{
+    max-width: 60%;
+    min-width: 40%;
+    border-radius: 15px;
+    margin: 1rem 0;
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    position: relative;
+    font-size: 15px;
+}
+.me{
+    background-color: #d4f9bb;
+    align-self: flex-end;
+}
+.ora{
+    color: rgb(202, 198, 198);
+    font-size: 12px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+
 /*FLEX*/
 .flex{
     display: flex;
@@ -79,6 +102,9 @@ figure img{
 /*MARGIN*/
 .m-left-1{
     margin-left: 1rem;
+}
+.m-left-10{
+    margin-left: 10px;
 }
 .m-top-0_5{
     margin-top: 0.5rem;
@@ -104,6 +130,7 @@ figure img{
 .p-1{
     padding: 1rem;
 }
+
 /*BG COLOR GREY*/
 .bg-grey{
     background-color: #eaeaea;
@@ -124,6 +151,9 @@ figure img{
 /*ALIGN*/
 .space{
     justify-content: space-between
+}
+.align-center{
+    align-items: center;
 }
 /*TEXT PROPERTY*/
 
