@@ -71,6 +71,9 @@ figure img{
     display: flex;
     flex-direction: column;
 }
+.scroll{
+    flex-grow: 1;
+}
 .message{
     max-width: 60%;
     min-width: 40%;
